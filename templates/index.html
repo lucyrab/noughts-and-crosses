@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+    </head>
+    <body>
+        <div class='overlay' id="overlay">
+        <div class='popup' id="popup">
+          <h2 class='title' id="title">Noughts and Crosses</h2>
+          <h3 class="subtitle" id="subtitle" display="none"></h3>
+          <input id='two-player-button' class='menu-button' type='button' value='Two Player Game'/>
+          <input id='computer-button' class='menu-button' type='button' value='Play Against Computer'/>
+        </div>
+      </div>
+        <h2 id="current-turn" style="display: none;">X's turn</h2>
+        <table class="board">
+            <tr>
+                <td class="square" id="square0"> </td>
+                <td class="square" id="square1"> </td>
+                <td class="square" id="square2"> </td>
+            </tr>
+            <tr>
+                <td class="square" id="square3"> </td>
+                <td class="square" id="square4"> </td>
+                <td class="square" id="square5"> </td>
+            </tr>
+            <tr>
+                <td class="square" id="square6"> </td>
+                <td class="square" id="square7"> </td>
+                <td class="square" id="square8"> </td>
+            </tr>
+        </table>
+    </body>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</html>
